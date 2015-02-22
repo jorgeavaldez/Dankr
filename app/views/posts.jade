@@ -1,0 +1,6 @@
+extends index
+
+block posts
+    for post in postlist
+        h4 #{post.title}
+        div #{post.text}

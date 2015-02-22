@@ -1,0 +1,9 @@
+extends index
+
+block postForm
+    h3 New Post
+    
+    form#newPostForm(name='addpost' method='post' action='/addpost')
+        input#inputPostTitle(type='text', name='postTitle')
+        input#inputPostText(type='text', name='postText')
+        button#buttonPostSubmit(type='submit') Posts
