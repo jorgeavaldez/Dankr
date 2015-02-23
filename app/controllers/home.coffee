@@ -6,13 +6,16 @@ Post  = mongoose.model 'Post'
 module.exports = (app) ->
   app.use '/', router
 
+router.get '/', (req, res, next) ->
+    res.location '/postlist'
+    res.redirect '/postlist'
+
 # Shows the post feed
 router.get '/postlist', (req, res, next) ->
 
     Post.find (err, posts) ->
         return next(err) if err
         res.render 'posts',
-            title: 'Dankr'
             postlist: posts
 
 # Shows the new post page

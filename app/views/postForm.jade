@@ -5,5 +5,7 @@ block postForm
     
     form#newPostForm(name='addpost' method='post' action='/addpost')
         input#inputPostTitle(type='text', name='postTitle')
-        input#inputPostText(type='text', name='postText')
+        br
+        textarea#inputPostText(type='text', name='postText')
+        br
         button#buttonPostSubmit(type='submit') Posts

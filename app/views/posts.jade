@@ -1,6 +1,10 @@
 extends index
 
 block posts
-    for post in postlist
-        h4 #{post.title}
-        div #{post.text}
+    div#postblock
+        for post in postlist
+            div#postcard
+                div#postcardinner
+                    h4#postTitle #{post.title}
+                    div#postText #{post.text}
+            br
